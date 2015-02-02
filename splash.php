@@ -1,5 +1,5 @@
 <?php
-PARAM_DEVICE_ID = 'device_id';
+define("PARAM_DEVICE_ID", 'device_id');
 
 $server = 'localhost';
 $user = 'root';
