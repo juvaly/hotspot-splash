@@ -20,6 +20,6 @@ if (!($device_id)) die('device_id is required');
 $query = "INSERT INTO devices (device_id, hotspot_name) VALUES ('$device_id','$hotspot_name')";
 $result = mysql_query($query) or die('insert failed: ' . mysql_error());
 
-header('Location: http://www.hotspotsplashscreens.com/hotspot-splash/splash.php?device_id'.$device_id);
+header('Location: http://www.hotspotsplashscreens.com/hotspot-splash/splash.php?device_id='.$device_id);
 http_response_code(201);
 ?>
