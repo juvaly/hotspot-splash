@@ -12,7 +12,7 @@ mysql_select_db($dbname);
 $device_id = isset($_GET[PARAM_DEVICE_ID]) ? $_GET[PARAM_DEVICE_ID] : false;
 $hotspot_name = isset($_POST[PARAM_HOTSPOT_NAME]) ? $_POST[PARAM_HOTSPOT_NAME] : 'Hotspot';
 
-if (!$device_id) die('device_id is required')
+if (!$device_id) echo('device_id is required')
 
 $query = "INSERT INTO devices (device_id, hotspot_name) VALUES ('". $device_id. "','". $hotspot_name ."')";
 mysql_query($query) or echo('insert failed: ' . mysql_error());
