@@ -12,7 +12,7 @@ $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
 
-$device_id = isset($_GET[PARAM_DEVICE_ID]) ? $_GET[PARAM_DEVICE_ID] : false;
+$device_id = isset($_POST[PARAM_DEVICE_ID]) ? $_POST[PARAM_DEVICE_ID] : false;
 $hotspot_name = isset($_POST[PARAM_HOTSPOT_NAME]) ? $_POST[PARAM_HOTSPOT_NAME] : 'Hotspot';
 
 if (!($device_id)) die('device_id is required');
