@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL); 
+ini_set("display_errors", 1); 
+
 define("PARAM_DEVICE_ID", 'device_id');
 define("PARAM_HOTSPOT_NAME", 'hotspot_name');
 
