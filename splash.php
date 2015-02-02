@@ -17,4 +17,4 @@ if ($device_id) {
 
 ?>
 
-<h1>Welcome to </h1><?php echo $device['hotspot_name'] ?>
+<h1>Welcome to <?php echo $device['hotspot_name'] ?></h1>
