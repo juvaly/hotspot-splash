@@ -14,7 +14,7 @@ $hotspot_name = sset($_POST[PARAM_HOTSPOT_NAME]) ? $_POST[PARAM_HOTSPOT_NAME] : 
 
 if (!$device_id) die('device_id is required')
 
-$query = 'INSERT INTO devices (device_id, hotspot_name) VALUES (\'. $device_id. '\', \''. $hotspot_name .'\'';
+$query = "INSERT INTO devices (device_id, hotspot_name) VALUES ('". $device_id. "','". $hotspot_name ."')";
 mysql_query($query) or die('insert failed: ' . mysql_error());
 
 header('Location: http://www.hotspotsplashscreens.com/hotspot-splash/splash.php?device_id'.$device_id);
