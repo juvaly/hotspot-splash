@@ -15,6 +15,8 @@ if ($device_id) {
 	$device = mysql_fetch_array($result);
 }
 
+$hotspot_name = isset($device) ? $device['hotspot_name'] : 'Nowhere';
+
 ?>
 
-<h1>Welcome to <?php echo $device['hotspot_name'] ?></h1>
+<h1>Welcome to <?php echo $hotspot_name ?></h1>
