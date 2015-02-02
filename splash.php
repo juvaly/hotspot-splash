@@ -10,11 +10,6 @@ mysql_select_db($dbname);
 
 $device_id = isset($_GET[PARAM_DEVICE_ID]) ? $_GET[PARAM_DEVICE_ID] : false;
 echo $device_id;
-if ($device_id) {
-	$query = 'SELECT * FROM devices WHERE device_id=\''. $device_id. '\'';
-	echo $query;
-	$result = mysql_query($query) or die('query failed: ' . mysql_error());
-}
 
 ?>
 
