@@ -21,7 +21,7 @@ $ssid_pwd = isset($_POST[PARAM_SSID_PWD]) ? $_POST[PARAM_SSID_PWD] : '';
 
 if (!($device_id)) {
 	die('device_id is required');
-	http_response_code(500)
+	http_response_code(500);
 }
 
 $query = "INSERT INTO devices (device_id, hotspot_name, ssid, ssid_pwd) VALUES ('$device_id','$hotspot_name','$ssid','$ssid_pwd')";
