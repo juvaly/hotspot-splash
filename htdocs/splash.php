@@ -1,6 +1,10 @@
 <?php
 define("PARAM_DEVICE_ID", 'device_id');
 
+$authaction = $_GET['authaction'];
+$redir = $_GET['redir'];
+$tok = $_GET['tok'];
+
 $server = 'localhost';
 $user = 'root';
 $pass = 'QEVk0C4uOVln';
@@ -15,8 +19,11 @@ if ($device_id) {
 	$device = mysql_fetch_array($result);
 }
 
+$url = "$authaction?redir=" . urlencode($redir) . "&tok=$tok";
+
 $hotspot_name = isset($device) ? $device['hotspot_name'] : 'Nowhere';
 
 ?>
 
 <h1>Welcome to <?php echo $hotspot_name ?></h1>
+<a href="<?= $url ?>" target="_top">Accept Terms</a>
