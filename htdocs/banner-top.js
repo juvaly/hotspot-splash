@@ -1,13 +1,16 @@
-if(!window.jQuery)
-{
-   var script = document.createElement('script');
-   script.type = "text/javascript";
-   script.src = "https://code.jquery.com/jquery-2.1.3.min.js";
-   document.getElementsByTagName('head')[0].appendChild(script);
-}
+(function() {
+	if(!window.jQuery)
+	{
+	   var script = document.createElement('script');
+	   script.type = "text/javascript";
+	   script.src = "https://code.jquery.com/jquery-2.1.3.min.js";
+	   document.getElementsByTagName('head')[0].appendChild(script);
+	}
+})();
 
-$(function() {
-	var banner = $('<div><h1>my test banner</h1></div>');
-	banner.css('{ position: fixed; top: 0; right: 50%; background: #fff; border: solid 10px #0f0; }');
+(function($) {
+	var banner = $('<div id="hscp-banner"><h1 id="hscp-banner-title">my test banner</h1></div>');
 	$('body').prepend(banner);
-}();
+	$('#hscp-banner').css('{ color: #900; }');
+	$('#hscp-banner-title').css('{ min-height: 90px; text-align: center; background: #fff; border: solid 10px #0f0; }');
+})(jQuery);
