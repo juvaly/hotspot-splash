@@ -49,9 +49,9 @@ if (!($is_splash_enabled)) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-offset-2 col-md-5">
-					<div class="center-block">
+					<div class="text-center">
 						<h1>Welcome to <?php echo $hotspot_name ?></h1>
-						<a href="<?= $auth_url ?>" target="_top">Accept Terms</a>
+						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Accept Terms</a>
 					</div>
 				</div>
 			</div>
