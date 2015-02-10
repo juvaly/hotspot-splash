@@ -23,6 +23,7 @@ $ssid = isset($_POST[PARAM_SSID]) ? $_POST[PARAM_SSID] : '';
 $ssid_pwd = isset($_POST[PARAM_SSID_PWD]) ? $_POST[PARAM_SSID_PWD] : '';
 $redirect_url = isset($_POST[PARAM_REDIRECT_URL]) ? $_POST[PARAM_REDIRECT_URL] : '';
 $is_splash_enabled = isset($_POST[PARAM_ENABLE_SPLASH]) ? $_POST[PARAM_ENABLE_SPLASH] : 1;
+$salt = isset($_POST[PARAM_SALT]) ? $_POST[PARAM_SALT] : 1;
 
 if (!($device_id)) {
 	die('device_id is required');
