@@ -51,7 +51,7 @@ if (!($is_splash_enabled)) {
 				<div class="col-md-offset-3 col-md-6">
 					<div class="text-center">
 						<h1><?php echo $hotspot_name ?></h1>
-						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Continue &rquot;</a>
+						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Continue &rsaquo;</a>
 						<p><small>By clicking Continue you are agreeing to our network <a href="#">terms of use</a> and <a href="#">privacy policy</a></small></p>
 					</div>
 				</div>
