@@ -24,7 +24,18 @@ if (!($device_id)) {
 	http_response_code(500);
 }
 
-$query = "INSERT INTO devices (device_id, hotspot_name, ssid, ssid_pwd) VALUES ('$device_id','$hotspot_name','$ssid','$ssid_pwd')";
+// test if device exists
+$query = "SELECT device_id FROM devices WHERE device_id='$device_id'";
+$result = mysql_query($query) or die('failed testing device exists: ' . mysql_error());
+if (mysql_fetch_array($result) !== false) {
+	$query = "UPDATE devices  SET hotspot_name = '$hotspot_name', ssid = '$ssid', ssid_pwd = '$ssid_pwd' WHERE device_id = '$device_id'";
+}
+else
+{
+	$query = "INSERT INTO devices (device_id, hotspot_name, ssid, ssid_pwd) VALUES ('$device_id','$hotspot_name','$ssid','$ssid_pwd')";
+}
+
+// register or update device
 $result = mysql_query($query) or die('insert failed: ' . mysql_error());
 
 header('Location: http://www.hotspotsplashscreens.com/hotspot-splash/splash.php?device_id='.$device_id);
