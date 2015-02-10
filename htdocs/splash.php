@@ -48,7 +48,7 @@ if (!($is_splash_enabled)) {
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<title><?php echo $hotspot_name ?></title>
 	</head>
-	<body>
+	<body dir="rtl">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -70,7 +70,7 @@ if (!($is_splash_enabled)) {
 							<strong>בשביל להמשיך להינות מה-WIFI החינמי שלנו, לחץ המשך למטה.</strong>
 						</p>
 						<p>
-							<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">המשך &rsaquo;</a>
+							<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">&lsaquo; המשך</a>
 						</p>
 						<p>
 							<small>לחיצה על המשך תהווה אישור כי קראת והסכמת <a href="#">לתנאי השימוש ברשת</a></small>
