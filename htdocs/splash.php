@@ -40,8 +40,10 @@ if (!($is_splash_enabled)) {
 ?> 
 
 <!-- page output -->
-<html>
+<!DOCTYPE html>
+<html lang="he-IL" xml:lang="he-IL">
 	<head>
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<title><?php echo $hotspot_name ?></title>
