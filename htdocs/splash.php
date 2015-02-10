@@ -44,15 +44,32 @@ if (!($is_splash_enabled)) {
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<title><?php echo $hotspot_name ?></title>
 	</head>
 	<body>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-offset-3 col-md-6">
 					<div class="text-center">
-						<h1><?php echo $hotspot_name ?></h1>
-						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Continue &rsaquo;</a>
-						<p><small>By clicking Continue you are agreeing to our network <a href="#">terms of use</a> and <a href="#">privacy policy</a></small></p>
+						<img src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
+						<p class="lead">Welcome to <?php echo $hotspot_name ?></p>
+						<p>
+							<strong>Our specials today:</strong>
+							<ul>
+								<li><strong>Special 1</strong>: some ingredients</li>
+								<li><strong>Special 2</strong>: some ingredients</li>
+								<li><strong>Special 3</strong>: some ingredients</li>
+							</ul>
+						</p>
+						<p>
+							To continue enjoying our free WI-FI click Continue below.
+						</p>
+						<p>
+							<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Continue &rsaquo;</a>
+						</p>
+						<p>
+							<small>By clicking Continue you are agreeing to our network <a href="#">terms of use</a> and <a href="#">privacy policy</a></small>
+						</p>
 					</div>
 				</div>
 			</div>
