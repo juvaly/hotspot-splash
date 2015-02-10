@@ -48,10 +48,11 @@ if (!($is_splash_enabled)) {
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-offset-2 col-md-5">
+				<div class="col-md-offset-3 col-md-6">
 					<div class="text-center">
-						<h1>Welcome to <?php echo $hotspot_name ?></h1>
-						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Accept Terms</a>
+						<h1><?php echo $hotspot_name ?></h1>
+						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">Continue &rquot;</a>
+						<p><small>By clicking Continue you are agreeing to our network <a href="#">terms of use</a> and <a href="#">privacy policy</a></small></p>
 					</div>
 				</div>
 			</div>
