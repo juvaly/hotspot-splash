@@ -37,7 +37,7 @@ if (!($is_splash_enabled)) {
 	exit();
 }
 
-?>
+?> 
 
 <!-- page output -->
 <html>
