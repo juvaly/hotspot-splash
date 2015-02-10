@@ -49,17 +49,17 @@ if (!($is_splash_enabled)) {
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-offset-3 col-md-6">
+				<div class="col-md-12">
 					<div class="text-center">
 						<img src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
 						<p class="lead">Welcome to <?php echo $hotspot_name ?></p>
 						<p>
 							<strong>Our specials today:</strong>
-							<ul>
-								<li><strong>Special 1</strong>: some ingredients</li>
-								<li><strong>Special 2</strong>: some ingredients</li>
-								<li><strong>Special 3</strong>: some ingredients</li>
-							</ul>
+							<dl>
+								<dt>Special 1</dt><dd>Fried Squid with Polenta</dd>
+								<dt>Special 2</dt><dd>Fried Polenta with Squid</dd>
+								<dt>Special 3</dt><dd>Fried Squid and Polenta with Peas</dd>
+							</dl>
 						</p>
 						<p>
 							To continue enjoying our free WI-FI click Continue below.
