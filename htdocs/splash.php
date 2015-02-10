@@ -42,13 +42,18 @@ if (!($is_splash_enabled)) {
 <!-- page output -->
 <html>
 	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 	</head>
 	<body>
 		<div class="container">
-			<div class="text-center">
-				<h1>Welcome to <?php echo $hotspot_name ?></h1>
-				<a href="<?= $auth_url ?>" target="_top">Accept Terms</a>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-5">
+					<div class="center-block">
+						<h1>Welcome to <?php echo $hotspot_name ?></h1>
+						<a href="<?= $auth_url ?>" target="_top">Accept Terms</a>
+					</div>
+				</div>
 			</div>
 		</div>
 
