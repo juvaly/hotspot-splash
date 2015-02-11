@@ -62,15 +62,15 @@ if (!($is_splash_enabled)) {
 
 						<h2 class="text-primary">המומלצים שלנו היום:</h2>
 					</div>
-					<div class="col-md-4 text-center bg-warning">
+					<div class="col-md-3 text-center bg-warning">
 						<h3>קפה + מאפה</h2>
 						<h2><strong>16 ₪</strong></h1>
 					</div>
-					<div class="col-md-4 text-center bg-warning">
-						<h3>קפה + סנביץ׳ ביס</h2>
+					<div class="col-md-3 col-md-offset-1 text-center bg-warning">
+						<h3>קפה + סנדביץ׳ ביס</h2>
 						<h2><strong>22 ₪</strong></h1>
 					</div>
-					<div class="col-md-4 text-center bg-warning">
+					<div class="col-md-3 col-md-offset-1 text-center bg-warning">
 						<h3>עסקית צהריים</h2>
 						<h2><strong>59 ₪</strong></h1>
 					</div>
