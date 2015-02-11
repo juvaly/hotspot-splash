@@ -51,31 +51,44 @@ if (!($is_splash_enabled)) {
 	<body dir="rtl">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<div class="text-center">
-						<img src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
+				<div class="col-md-12 text-center">
+					<img src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
+				</div>
+			</div>
+
+			<div class="row">
+					<div class="col-md-12 text-center">
 						<p class="lead">ברוכים הבאים ל<?php echo $hotspot_name ?></p>
-						<p>
-							<strong class="text-primary">הספיישלים שלנו היום:</strong>
-							<dl>
-								<dt>מנה 1</dt><dd>קלמארי מטוגן על מצע רוקט ויוגורט</dd>
-								<dt>מנה 2</dt><dd>פילה בקר בציר יין</dd>
-								<dt>מנה 3</dt><dd>אגז בנדיקט קלאסי</dd>
-							</dl>
-						</p>
 
-						<hr />
-
-						<p class="text-danger">
-							<strong>בשביל להמשיך להינות מה-WIFI החינמי שלנו, לחץ המשך למטה.</strong>
-						</p>
-						<p>
-							<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">&lsaquo; המשך</a>
-						</p>
-						<p>
-							<small>לחיצה על המשך תהווה אישור כי קראת והסכמת <a href="#">לתנאי השימוש ברשת</a></small>
-						</p>
+						<h1 class="text-primary">הספיישלים שלנו היום:</h1>
 					</div>
+					<div class="col-md-4 text-center">
+						<h3>קפה + מאפה</h2>
+						<h2><strong>16 ₪</strong></h1>
+					</div>
+					<div class="col-md-4 text-center">
+						<h3>קפה + סנביץ׳ ביס</h2>
+						<h2><strong>22 ₪</strong></h1>
+					</div>
+					<div class="col-md-4 text-center">
+						<h3>עסקית צהריים</h2>
+						<h2><strong>59 ₪</strong></h1>
+					</div>
+			</div>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p class="text-danger">
+						<strong>בשביל להמשיך להינות מה-WIFI החינמי שלנו, נא ללחוץ על המשך.</strong>
+					</p>
+					<p>
+						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">המשך &lsaquo;</a>
+					</p>
+					<p>
+						<small>לחיצה על המשך תהווה אישור כי קראת והסכמת <a href="#">לתנאי השימוש ברשת</a></small>
+					</p>
 				</div>
 			</div>
 		</div>
