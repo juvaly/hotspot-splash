@@ -84,7 +84,7 @@ if (!($is_splash_enabled)) {
 						<strong>בשביל להמשיך להינות מה-WIFI החינמי שלנו, נא ללחוץ על המשך.</strong>
 					</p>
 					<p>
-						<a class="btn btn-primary" href="<?= $auth_url ?>" target="_top">המשך &lsaquo;</a>
+						<a class="btn btn-success btn-large" href="<?= $auth_url ?>" target="_top">המשך &rsaquo;</a>
 					</p>
 					<p>
 						<small>לחיצה על המשך תהווה אישור כי קראת והסכמת <a href="#">לתנאי השימוש ברשת</a></small>
