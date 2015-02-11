@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL); 
+ini_set("display_errors", 1); 
 
 header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
 header('Cache-Control: no-store, no-cache, must-revalidate');
@@ -7,13 +9,13 @@ header('Pragma: no-cache');
 
 define("PARAM_DEVICE_ID", 'device_id');
 
-$authaction = $_GET['authaction'];
-$original_redirect = $_GET['redir'];
-$tok = $_GET['tok'];
+$authaction = isset($_GET['authaction']) ? $_GET['authaction'] : '';
+$original_redirect = isset($_GET['redir']) ? $_GET['redir'] : '';
+$tok = isset($_GET['tok']) ? $_GET['tok'] : '';
 
 $server = 'localhost';
 $user = 'root';
-$pass = 'QEVk0C4uOVln';
+$pass =  'karj1sf'; //'QEVk0C4uOVln';
 $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
@@ -30,6 +32,7 @@ $auth_url = "$authaction?redir=" . urlencode($original_redirect) . "&tok=$tok";
 $hotspot_name = isset($device) ? $device['hotspot_name'] : 'Nowhere';
 $redirect_url = isset($device) ? $device['redirect_url'] : '';
 $is_splash_enabled = isset($device) ? $device['is_splash_enabled'] : 0;
+$specials = isset($device) ? json_decode($device['specials']) : [];
 
 // don't display any splash page
 if (!($is_splash_enabled)) {
@@ -47,12 +50,17 @@ if (!($is_splash_enabled)) {
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<title><?php echo $hotspot_name ?></title>
+
+		<style>
+			.img-centered { margin: 0 auto; }
+			.special { padding: 5px 0; }
+		</style>
 	</head>
 	<body dir="rtl">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<img src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
+					<img class="img-responsive img-centered" src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
 				</div>
 			</div>
 
@@ -62,22 +70,22 @@ if (!($is_splash_enabled)) {
 
 						<h2 class="text-primary">המומלצים שלנו היום:</h2>
 					</div>
-					<div class="col-md-3 text-center">
+					<div class="col-md-4 text-center">
 						<div class="special bg-warning">
-							<h3>קפה + מאפה</h2>
-							<h2><strong>16 ₪</strong></h1>
+							<h3><?php echo $specials[0]->text ?></h2>
+							<h2><strong><?php echo $specials[0]->price ?> ₪</strong></h1>
 						</div>
 					</div>
-					<div class="col-md-3 text-center">
+					<div class="col-md-4 text-center">
 						<div class="special bg-warning">
-							<h3>קפה + סנדביץ׳ ביס</h2>
-							<h2><strong>22 ₪</strong></h1>
+							<h3><?php echo $specials[1]->text ?></h2>
+							<h2><strong><?php echo $specials[1]->price ?> ₪</strong></h1>
 						</div>
 					</div>
-					<div class="col-md-3 text-center">
+					<div class="col-md-4 text-center">
 						<div class="special bg-warning">
-							<h3>עסקית צהריים</h2>
-							<h2><strong>59 ₪</strong></h1>
+							<h3><?php echo $specials[2]->text ?></h2>
+							<h2><strong><?php echo $specials[2]->price ?> ₪</strong></h1>
 						</div>
 					</div>
 			</div>
@@ -89,9 +97,11 @@ if (!($is_splash_enabled)) {
 					<p class="text-danger">
 						<strong>בשביל להמשיך להינות מה-WIFI החינמי שלנו, נא ללחוץ על המשך.</strong>
 					</p>
-					<p>
-						<a class="btn btn-success btn-large" href="<?= $auth_url ?>" target="_top">המשך &rsaquo;</a>
-					</p>
+					<div class="row">
+						<div class="col-md-4 col-md-offset-4">
+							<a class="btn btn-success btn-block btn-lg" href="<?= $auth_url ?>" target="_top">המשך &rsaquo;</a>
+						</div>
+					</div>
 					<p>
 						<small>לחיצה על המשך תהווה אישור כי קראת והסכמת <a href="#">לתנאי השימוש ברשת</a></small>
 					</p>
