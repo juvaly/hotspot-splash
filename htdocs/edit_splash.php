@@ -11,7 +11,7 @@ define("PARAM_DEVICE_ID", 'device_id');
 
 $server = 'localhost';
 $user = 'root';
-$pass =  'karj1sf'; //'QEVk0C4uOVln';
+$pass =  'QEVk0C4uOVln';
 $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);

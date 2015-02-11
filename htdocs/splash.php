@@ -15,7 +15,7 @@ $tok = isset($_GET['tok']) ? $_GET['tok'] : '';
 
 $server = 'localhost';
 $user = 'root';
-$pass =  'karj1sf'; //'QEVk0C4uOVln';
+$pass =  'QEVk0C4uOVln';
 $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
