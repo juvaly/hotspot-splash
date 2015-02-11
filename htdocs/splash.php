@@ -58,19 +58,19 @@ if (!($is_splash_enabled)) {
 
 			<div class="row">
 					<div class="col-md-12 text-center">
-						<p class="lead">ברוכים הבאים ל<?php echo $hotspot_name ?></p>
+						<h1 class="lead">ברוכים הבאים ל<?php echo $hotspot_name ?></h1>
 
-						<h1 class="text-primary">הספיישלים שלנו היום:</h1>
+						<h2 class="text-primary">המומלצים שלנו היום:</h2>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center bg-warning">
 						<h3>קפה + מאפה</h2>
 						<h2><strong>16 ₪</strong></h1>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center bg-warning">
 						<h3>קפה + סנביץ׳ ביס</h2>
 						<h2><strong>22 ₪</strong></h1>
 					</div>
-					<div class="col-md-4 text-center">
+					<div class="col-md-4 text-center bg-warning">
 						<h3>עסקית צהריים</h2>
 						<h2><strong>59 ₪</strong></h1>
 					</div>
