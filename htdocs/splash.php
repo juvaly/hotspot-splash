@@ -9,10 +9,13 @@ header('Pragma: no-cache');
 
 define("PARAM_DEVICE_ID", 'device_id');
 
+# params for building authorization URL
 $authaction = isset($_GET['authaction']) ? $_GET['authaction'] : '';
 $original_redirect = isset($_GET['redir']) ? $_GET['redir'] : '';
 $tok = isset($_GET['tok']) ? $_GET['tok'] : '';
+$auth_url = "$authaction?redir=" . urlencode($original_redirect) . "&tok=$tok";
 
+# connect to database
 $server = 'localhost';
 $user = 'root';
 $pass =  'QEVk0C4uOVln';
@@ -20,6 +23,7 @@ $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
 
+# check device_id exists
 $device_id = isset($_GET[PARAM_DEVICE_ID]) ? $_GET[PARAM_DEVICE_ID] : false;
 if ($device_id) {
 	$query = "SELECT * FROM devices WHERE device_id='$device_id'";
@@ -27,14 +31,13 @@ if ($device_id) {
 	$device = mysql_fetch_array($result);
 }
 
-$auth_url = "$authaction?redir=" . urlencode($original_redirect) . "&tok=$tok";
-
+# get device info from database
 $hotspot_name = isset($device) ? $device['hotspot_name'] : 'Nowhere';
 $redirect_url = isset($device) ? $device['redirect_url'] : '';
 $is_splash_enabled = isset($device) ? $device['is_splash_enabled'] : 0;
 $specials = isset($device) ? json_decode($device['specials']) : [];
 
-// don't display any splash page
+# move on if splash page not enabled for this device
 if (!($is_splash_enabled)) {
 	header('Location: ' . $auth_url, true, 302);
 	exit();
