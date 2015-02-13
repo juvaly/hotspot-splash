@@ -1,8 +1,8 @@
 (function() {
 	var css = document.createElement('style');
 	css.innerHTML = 
-		"#hscp-banner { 'min-height': '90px', 'text-align': 'center', 'background': '#fff', 'border': 'solid 10px #0f0' }" +
-		"#hscp-banner-title { color: '#900', padding: '20px' }";
+		"#hscp-banner { 'min-height': '90px'; 'text-align': 'center'; 'background': '#fff'; 'border': 'solid 10px #0f0' }" +
+		"#hscp-banner-title { color: '#900'; padding: '20px' }";
 	document.getElementsByTagName('head')[0].appendChild(css);
 
 	if ( self === top ) {
