@@ -49,6 +49,7 @@ if (mysql_fetch_array($result) !== false) {
 	ssid = '$ssid', 
 	ssid_pwd = '$ssid_pwd',
 	is_splash_enabled = $is_splash_enabled,
+	redirect_url = $redirect_url,
 	salt = $salt
 	WHERE device_id = '$device_id'";
 }
