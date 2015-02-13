@@ -9,7 +9,8 @@
 		var banner = document.createElement('div');
 		banner.id = "hscp-banner";
 		var title = document.createElement('h1');
-		title.id = 'hscp-banner-title';
+		title.id = "hscp-banner-title";
+		title.innerHTML = "my test banner";
 		banner.appendChild(title);
 		var body = document.getElementsByTagName('body')[0];
 		body.insertBefore(banner, body.firstChild);
