@@ -50,7 +50,7 @@ function parseQueryString() {
 
 //
 var qs = parseQueryString();
-var url = "http://www.hotspotsplashscreens.com/hotspot-splash/action.php?a=trk&t=" + qs.t + "d_id=" + qs.d_id + "c_id" = qs.c_id;
+var url = "http://www.hotspotsplashscreens.com/hotspot-splash/action.php?a=trk&t=" + qs.t + "d_id=" + qs.d_id + "c_id" + qs.c_id;
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
