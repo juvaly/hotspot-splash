@@ -18,8 +18,11 @@ $device_id = isset($_GET[PARAM_DEVICE_ID]) ? $_GET[PARAM_DEVICE_ID] : false;
 $client_id = isset($_GET[PARAM_CLIENT_ID]) ? $_GET[PARAM_CLIENT_ID] : false;
 $token = isset($_GET[PARAM_TOKEN]) ? $_GET[PARAM_TOKEN] : false;
 $action = isset($_GET[PARAM_ACTION]) ? $_GET[PARAM_ACTION] : false;
+$ref_url = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
 
-# fail if missing
+# exit if missing
+if (!($device_id) || !($client_id) || !($token))
+	exit();
 
 # connect to database
 $server = 'localhost';
@@ -28,6 +31,9 @@ $pass =  'QEVk0C4uOVln';
 $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
+
+# register call
+
 ?>
 
 (function() {
@@ -36,7 +42,7 @@ mysql_select_db($dbname);
 		banner.id = "hscp-banner";
 		var title = document.createElement("h1");
 		title.id = "hscp-banner-title";
-		title.innerHTML = "my test banner";
+		title.innerHTML = "<?php echo $ref_url; ?>";
 		banner.appendChild(title);
 		var body = document.getElementsByTagName("body")[0];
 		body.insertBefore(banner, body.firstChild);
