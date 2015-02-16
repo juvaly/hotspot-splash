@@ -19,7 +19,9 @@ $client_id = isset($_GET[PARAM_CLIENT_ID]) ? $_GET[PARAM_CLIENT_ID] : false;
 $token = isset($_GET[PARAM_TOKEN]) ? $_GET[PARAM_TOKEN] : false;
 $action = isset($_GET[PARAM_ACTION]) ? $_GET[PARAM_ACTION] : false;
 
-# fail if missing
+# exit if missing
+if (!($device_id) || !($client_id) || !($token))
+	exit();
 
 # connect to database
 $server = 'localhost';
