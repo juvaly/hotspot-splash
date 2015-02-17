@@ -56,6 +56,7 @@ if (!($is_splash_enabled)) {
 
 		<style>
 			.img-centered { margin: 0 auto; }
+			.img-full { width: 100%; }
 			.special { padding: 5px 0; }
 		</style>
 	</head>
@@ -63,7 +64,7 @@ if (!($is_splash_enabled)) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<img class="img-responsive img-centered" src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
+					<img class="img-responsive img-centered img-full" src="http://hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id ?>.jpg" alt="<?php echo $hotspot_name ?>"/>
 				</div>
 			</div>
 
