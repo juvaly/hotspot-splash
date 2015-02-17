@@ -38,7 +38,7 @@ mysql_select_db($dbname);
 # check for cookie
 $show_banner = false;
 if (!isset($_COOKIE[COOKIE_CLIENT_INFO])) {
-	setcookie(COOKIE_CLIENT_INFO, '1', time() + 60, "/"); // expire in 1 minute
+	setcookie(COOKIE_CLIENT_INFO, '1', time() + 1800, "/"); // expire in 30 minutes
 	$show_banner = true;
 }
 
@@ -51,14 +51,18 @@ mysql_query($query) or die('insert failed: ' . mysql_error());
 
 (function() {
 	if ( self === top ) {
-		var banner = document.createElement("div");
-		banner.id = "hscp-banner";
-		var title = document.createElement("h1");
-		title.id = "hscp-banner-title";
-		title.innerHTML = "<?php echo $ref_url; ?>";
-		banner.appendChild(title);
+		var frame = document.createElement("div");
+		frame.id = "hscp-banner";
+		var img = document.createElement("img");
+		img.id = "hscp-banner-image";
+		img.innerHTML = '<img src="http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner.jpg" />';
+		frame.appendChild(img);
+		var close = document.createElement("div");
+		close.id = "hscp-banner-close";
+		close.innerHTML = "X";
+		frame.appendChild(close);
 		var body = document.getElementsByTagName("body")[0];
-		body.insertBefore(banner, body.firstChild);
+		body.insertBefore(frame, body.firstChild);
 	}
 })();
 

@@ -9,6 +9,8 @@ header('Pragma: no-cache');
 
 define("PARAM_DEVICE_ID", 'device_id');
 
+define("COOKIE_CLIENT_INFO", 'cci');
+
 # params for building authorization URL
 $authaction = isset($_GET['authaction']) ? $_GET['authaction'] : '';
 $original_redirect = isset($_GET['redir']) ? $_GET['redir'] : '';
@@ -36,6 +38,9 @@ $hotspot_name = isset($device) ? $device['hotspot_name'] : 'Nowhere';
 $redirect_url = isset($device) ? $device['redirect_url'] : '';
 $is_splash_enabled = isset($device) ? $device['is_splash_enabled'] : 0;
 $specials = isset($device) ? json_decode($device['specials']) : [];
+
+# set client id cookie
+setcookie(COOKIE_CLIENT_INFO, '1', time() + 1800, "/"); // expire in 30 minutes
 
 # move on if splash page not enabled for this device
 if (!($is_splash_enabled)) {

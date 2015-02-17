@@ -1,2 +1,3 @@
-#hscp-banner { position: fixed; bottom: 0; right: 0; text-align: center; background: #fff; border: solid 10px #0f0; width: 320px; height: 250px; }
-#hscp-banner-title { color: #900; padding: 20px }
+#hscp-banner { position: fixed; bottom: 0; right: 50%; background: #262626; border: solid 10px #fff; }
+#hscp-banner-image { }
+#hscp-banner-close { color: #fff; font-size: 24px; font-weight: bold; position: relative; top: 5px; right: 5px; }
