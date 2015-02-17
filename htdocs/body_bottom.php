@@ -13,6 +13,8 @@ define("PARAM_CLIENT_ID", 'c_id');
 define("PARAM_TOKEN", 't');
 define("PARAM_ACTION", 'a');
 
+define("COOKIE_CLIENT_INFO", 'cci');
+
 # get parameters
 $device_id = isset($_GET[PARAM_DEVICE_ID]) ? $_GET[PARAM_DEVICE_ID] : false;
 $client_id = isset($_GET[PARAM_CLIENT_ID]) ? $_GET[PARAM_CLIENT_ID] : false;
@@ -33,9 +35,19 @@ $dbname = 'hotspot-splash';
 $con = mysql_connect($server, $user, $pass) or die("Can't connect");
 mysql_select_db($dbname);
 
-# register call
+# check for cookie
+$show_banner = false;
+if (!isset($_COOKIE[COOKIE_CLIENT_INFO])) {
+	setcookie(COOKIE_CLIENT_INFO, '1', time() + 60, "/"); // expire in 1 minute
+	$show_banner = true;
+}
 
+# register call
+$query = "INSERT INTO client_visits (client_id, device_id, url) VALUES ('$client_id', '$device_id', '$ref_url')";
+mysql_query($query) or die('insert failed: ' . mysql_error());
 ?>
+
+<?php if ($show_banner) { ?>
 
 (function() {
 	if ( self === top ) {
@@ -49,3 +61,5 @@ mysql_select_db($dbname);
 		body.insertBefore(banner, body.firstChild);
 	}
 })();
+
+<?php } ?>
