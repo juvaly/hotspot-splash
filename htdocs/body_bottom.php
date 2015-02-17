@@ -21,8 +21,9 @@ $action = isset($_GET[PARAM_ACTION]) ? $_GET[PARAM_ACTION] : false;
 $ref_url = isset($_SERVER["HTTP_REFERER"]) ? $_SERVER["HTTP_REFERER"] : '';
 
 # exit if missing
-if (!($device_id) || !($client_id) || !($token))
-	exit();
+if (!($device_id) || !($client_id) || !($token)) {
+#	exit();
+}
 
 # connect to database
 $server = 'localhost';
