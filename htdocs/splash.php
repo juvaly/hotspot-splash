@@ -97,12 +97,9 @@ if (!($is_splash_enabled)) {
 
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<p class="text-danger">
-						<strong>בשביל להמשיך להינות מה-WIFI החינמי שלנו, נא ללחוץ על המשך.</strong>
-					</p>
 					<div class="row">
 						<div class="col-md-4 col-md-offset-4">
-							<a class="btn btn-success btn-block btn-lg" href="<?= $auth_url ?>" target="_top">המשך &rsaquo;</a>
+							<a class="btn btn-success btn-block btn-lg" href="<?= $auth_url ?>" target="_top">המשך בגלישה חינם &rsaquo;</a>
 						</div>
 					</div>
 					<p>
