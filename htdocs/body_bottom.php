@@ -59,7 +59,8 @@ mysql_query($query) or die('insert failed: ' . mysql_error());
 		frame.appendChild(img);
 		var close = document.createElement("div");
 		close.id = "hscp-banner-close";
-		close.innerHTML = "X";
+		close.innerHTML = "X סגור";
+		close.onclick = function() { document.getElementsByTagName("body")[0].removeChild(document.getElementById("hscp-banner")); }
 		frame.appendChild(close);
 		var body = document.getElementsByTagName("body")[0];
 		body.insertBefore(frame, body.firstChild);
