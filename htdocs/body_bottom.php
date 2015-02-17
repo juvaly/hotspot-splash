@@ -55,7 +55,7 @@ mysql_query($query) or die('insert failed: ' . mysql_error());
 		frame.id = "hscp-banner";
 		var img = document.createElement("img");
 		img.id = "hscp-banner-image";
-		img.innerHTML = '<img src="http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner.jpg" />';
+		img.src = "http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner.jpg";
 		frame.appendChild(img);
 		var close = document.createElement("div");
 		close.id = "hscp-banner-close";
