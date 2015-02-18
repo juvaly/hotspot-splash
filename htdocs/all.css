@@ -1,3 +1,6 @@
 #hscp-banner { position: fixed; bottom: 0; left: 0; background: #262626; border: solid 5px #fff; z-index: 999; }
 #hscp-banner-image { }
 #hscp-banner-close { color: #fff; font-family: futura; font-size: 16px; font-weight: bold; position: absolute; top: 12px; left: 10px; cursor: pointer; }
+
+.hscp-img-centered { margin: 0 auto; }
+.hscp-full { width: 100%; }
