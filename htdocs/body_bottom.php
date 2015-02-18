@@ -57,7 +57,7 @@ window.mobilecheck = function() {
 
 (function() {
 	if ( self === top ) {
-		if (mobilecheck()) {
+		if (window.mobilecheck()) {
 			var frame = document.createElement("div");
 			frame.id = "hscp-banner-m";
 			var img = document.createElement("img");
