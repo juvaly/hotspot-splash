@@ -16,6 +16,6 @@ $token = isset($_GET[PARAM_TOKEN]) ? $_GET[PARAM_TOKEN] : false;
 <body>
 	is your test working?
 
-	<script src="body_bottom.php?d_id=?php echo $device_id ?>&c_id=<?php echo $client_id ?>&t=<?php echo $token ?>"></script>
+	<script src="body_bottom.php?d_id=<?php echo $device_id ?>&c_id=<?php echo $client_id ?>&t=<?php echo $token ?>"></script>
 </body>
 </html>
