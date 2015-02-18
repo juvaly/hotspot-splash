@@ -65,7 +65,7 @@ mysql_query($query) or die('insert failed: ' . mysql_error());
 			var img = document.createElement("img");
 			img.id = "hscp-banner-image-m";
 			img.src = "http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner_m.jpg";
-			img.className = "img-responsive hscp-img-full";
+			img.className = "hscp-img-responsive";
 			frame.appendChild(img);
 			var close = document.createElement("div");
 			close.id = "hscp-banner-close-m";
@@ -92,7 +92,7 @@ mysql_query($query) or die('insert failed: ' . mysql_error());
 			body.insertBefore(frame, body.firstChild);
 		}
 	}
-	
+
 })();
 
 <?php } ?>
