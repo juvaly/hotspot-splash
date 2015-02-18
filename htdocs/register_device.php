@@ -20,7 +20,7 @@ $redirect_url = isset($_POST[PARAM_REDIRECT_URL]) ? $_POST[PARAM_REDIRECT_URL] :
 $is_splash_enabled = isset($_POST[PARAM_ENABLE_SPLASH]) ? $_POST[PARAM_ENABLE_SPLASH] : 1;
 $salt = "T5Vq8wx31JDjUYkDlzCJ"; //isset($_POST[PARAM_SALT]) ? $_POST[PARAM_SALT] : 1;
 $token = isset($_POST[PARAM_TOKEN]) ? $_POST[PARAM_TOKEN] : false;
-$check = md5($salt.$device_id.$hotspot_name.$source_ssid.$source_ssid_pwd);
+$check = md5($salt.$device_id.$hotspot_name.$ssid.$ssid_pwd);	
 
 # fail if required params missing
 if (!($device_id)) {
