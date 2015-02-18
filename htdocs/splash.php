@@ -82,19 +82,19 @@ if (!($is_splash_enabled)) {
 					<div class="col-md-4 text-center">
 						<div class="special bg-warning">
 							<h3><?php echo $specials[0]->text ?></h2>
-							<h2><strong><?php echo $specials[0]->price ?> ₪</strong></h1>
+							<h2><strong><?php //echo $specials[0]->price ?> ₪</strong></h1>
 						</div>
 					</div>
 					<div class="col-md-4 text-center">
 						<div class="special bg-warning">
 							<h3><?php echo $specials[1]->text ?></h2>
-							<h2><strong><?php echo $specials[1]->price ?> ₪</strong></h1>
+							<h2><strong><?php //echo $specials[1]->price ?> ₪</strong></h1>
 						</div>
 					</div>
 					<div class="col-md-4 text-center">
 						<div class="special bg-warning">
 							<h3><?php echo $specials[2]->text ?></h2>
-							<h2><strong><?php echo $specials[2]->price ?> ₪</strong></h1>
+							<h2><strong><?php //echo $specials[2]->price ?> ₪</strong></h1>
 						</div>
 					</div>
 			</div>
