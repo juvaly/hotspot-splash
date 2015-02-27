@@ -5,8 +5,8 @@ error_reporting (0);
 $salt_length = 20;
 $secret = "T5Vq8wx31JDjUYkDlzCJ";
 
-$device_id = $_POST["device_id"];
-$token = $_POST["t"];
+$device_id = isset($_POST["device_id"]) ? $_POST["device_id"] : isset($_GET["device_id"]) ? $_GET["device_id"] : '';
+$token = isset($_POST["t"]) ? $_POST["t"] : isset($_GET["t"]) ? $_GET["t"] : '';
 
 $check = md5($secret.$device_id);
 
