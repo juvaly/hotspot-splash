@@ -59,38 +59,38 @@ mysql_query($query) or die('insert failed: ' . mysql_error());
 	}
 
 	if ( self === top ) {
-		if (window.mobilecheck()) {
-			var frame = document.createElement("div");
-			frame.id = "hscp-banner-m";
-			var img = document.createElement("img");
-			img.id = "hscp-banner-image-m";
-			img.src = "http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner_m.jpg";
-			img.className = "hscp-img-responsive";
-			frame.appendChild(img);
-			var close = document.createElement("div");
-			close.id = "hscp-banner-close-m";
-			close.innerHTML = "X";
-			close.onclick = function() { document.getElementsByTagName("body")[0].removeChild(document.getElementById("hscp-banner-m")); }
-			frame.appendChild(close);
-			var body = document.getElementsByTagName("body")[0];
-			body.insertBefore(frame, body.firstChild);
-		}
-		else
-		{
-			var frame = document.createElement("div");
-			frame.id = "hscp-banner";
-			var img = document.createElement("img");
-			img.id = "hscp-banner-image";
-			img.src = "http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner.jpg";
-			frame.appendChild(img);
-			var close = document.createElement("div");
-			close.id = "hscp-banner-close";
-			close.innerHTML = "X";
-			close.onclick = function() { document.getElementsByTagName("body")[0].removeChild(document.getElementById("hscp-banner")); }
-			frame.appendChild(close);
-			var body = document.getElementsByTagName("body")[0];
-			body.insertBefore(frame, body.firstChild);
-		}
+		//if (window.mobilecheck()) {
+		//	var frame = document.createElement("div");
+		//	frame.id = "hscp-banner-m";
+		//	var img = document.createElement("img");
+		//	img.id = "hscp-banner-image-m";
+		//	img.src = "http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner_m.jpg";
+		//	img.className = "hscp-img-responsive";
+		//	frame.appendChild(img);
+		//	var close = document.createElement("div");
+		//	close.id = "hscp-banner-close-m";
+		//	close.innerHTML = "X";
+		//	close.onclick = function() { document.getElementsByTagName("body")[0].removeChild(document.getElementById("hscp-banner-m")); }
+		//	frame.appendChild(close);
+		//	var body = document.getElementsByTagName("body")[0];
+		//	body.insertBefore(frame, body.firstChild);
+		//}
+		//else
+		//{
+		//	var frame = document.createElement("div");
+		//	frame.id = "hscp-banner";
+		//	var img = document.createElement("img");
+		//	img.id = "hscp-banner-image";
+		//	img.src = "http://www.hotspotsplashscreens.com/hotspot-splash/images/<?php echo $device_id; ?>_banner.jpg";
+		//	frame.appendChild(img);
+		//	var close = document.createElement("div");
+		//	close.id = "hscp-banner-close";
+		//	close.innerHTML = "X";
+		//	close.onclick = function() { document.getElementsByTagName("body")[0].removeChild(document.getElementById("hscp-banner")); }
+		//	frame.appendChild(close);
+		//	var body = document.getElementsByTagName("body")[0];
+		//	body.insertBefore(frame, body.firstChild);
+		//}
 	}
 
 })();
